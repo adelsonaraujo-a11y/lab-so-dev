@@ -1,29 +1,34 @@
-# Atividades 6 — Questão de síntese
+# Atividades 5 e 6 — Questões de síntese
 # Preencha este arquivo durante e após as atividades.
 # ─────────────────────────────────────────────────────
 
-# ATIVIDADE 6 — O shell como JCL moderno
+# ATIVIDADE 5 — O shell como JCL moderno
 
 # O slide da genealogia mostrou que o JCL usava comandos como
-# // ASSIGN SYS004,TAPE para associar um job a um dispositivo.
+# // ASSIGN SYS004,TAPE para associar um trabalho a um dispositivo.
 # No shell moderno, qual mecanismo cumpre papel equivalente?
+# Dê um exemplo concreto do que você usou nesta atividade.
 
-Resposta:
+Resposta: No shell moderno, o papel equivalente ao JCL é realizado pelos comandos do terminal e pelo redirecionamento de arquivos e processos. Um exemplo usado nesta atividade foi o comando gcc -E soma.c -o soma.i, no qual o shell executou o compilador e associou a saída ao arquivo soma.i usando a opção -o.
+
+
+
 
 # ─────────────────────────────────────────────────────
 
-# ATIVIDADE 7 — Make
+# ATIVIDADE 6 — Make
 
 # 1. O monitor histórico verificava a conclusão de cada job antes
 #    de despachar o próximo. No make, qual mecanismo cumpre esse
 #    papel? Como o make sabe que não precisa recompilar um arquivo
 #    que não mudou?
 
-Resposta 1:
+Resposta 1: O make utiliza dependências e datas de modificação dos arquivos para controlar a compilação. Ele verifica se um arquivo-fonte foi alterado depois do último executável gerado. Se não houve mudança, o make entende que não é necessário recompilar aquele arquivo.
+
 
 
 # 2. O monitor unificava "supervisor, carregador e rotinas de I/O
 #    sob uma interface textual". O que o Makefile unifica no fluxo
 #    de desenvolvimento moderno?
 
-Resposta 2:
+Resposta 2: O Makefile unifica etapas do desenvolvimento como compilação, montagem, ligação e execução de comandos em um fluxo automatizado. Ele organiza todo o processo de construção do programa sob uma interface textual única.
